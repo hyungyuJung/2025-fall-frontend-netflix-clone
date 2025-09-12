@@ -2,3 +2,5 @@
 .header {height:48px; margin: 0px}
 .hero { width: 1440px; height: 800px; background-image:url('/img/before_sunset_hero.jpg'); background-repeat:no-repeat; background-size:cover;}
 .netflix_title{color: red; font-size:x-large;}
+.movie_box{width:240px; height: 160px}
+.list_title{color:aliceblue; font-size:large;}
