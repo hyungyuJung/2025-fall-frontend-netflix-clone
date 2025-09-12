@@ -3,4 +3,6 @@
 .hero { width: 1440px; height: 800px; background-image:url('/img/before_sunset_hero.jpg'); background-repeat:no-repeat; background-size:cover;}
 .netflix_title{color: red; font-size:x-large;}
 .movie_box{width:240px; height: 160px}
+.movie_card1{width:240px; height: 144px}
+.movie_card2{width:120px; height: 180px}
 .list_title{color:aliceblue; font-size:large;}
