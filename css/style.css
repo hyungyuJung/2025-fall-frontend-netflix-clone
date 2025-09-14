@@ -6,7 +6,7 @@
     justify-content: space-between; /*divide right and left header part*/
 	align-items: center;
 	height: 72px;
-	padding: 0 60px;
+	padding: 0 24px;
     margin: 0;
 }
 
@@ -43,7 +43,68 @@
     gap: 25px;
 }
 
-.hero { width: 1440px; height: 800px; background-image:url('/img/before_sunset_hero_2.jpg'); background-repeat:no-repeat; background-size:cover;}
+/* hero styles */
+.hero {
+    width: 100%; 
+    height: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+/* background image */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/before_sunset_hero_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -2; /* fix to background image */
+}
+/* overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+    z-index: -1; /* higher than  backgound image, lower than contents */
+}
+
+/* hero content styles */
+.hero_content {
+    max-width: 620px;
+	z-index: 0; /* higher than overlay */
+}
+/* movie title for hero */
+.hero_title {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+/* movie description for hero  */
+.hero_rank {
+    font-size: 1.8rem;
+    color: white;
+    margin:0;
+}
+/* movie description for hero  */
+.hero_description {
+    font-size: 1.4rem;
+    color: white;
+    line-height: 1.5;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 .movie_card1{width:240px;}
 .movie_card1 img {
