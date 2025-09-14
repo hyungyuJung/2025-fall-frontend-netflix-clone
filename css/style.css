@@ -42,6 +42,16 @@
     color: white;
     gap: 25px;
 }
+.header_right a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* overall main layout (by flex box) */
+.main{
+	display: flex;
+	flex-direction: column;
+}
 
 /* hero styles */
 .hero {
@@ -106,6 +116,19 @@
     margin-bottom: 30px;
 }
 
+/* card list styles */
+.list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.list_title{color:aliceblue; font-size:large;}
+.list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* movie card1 styles (except ranking row) */
 .movie_card1{width:240px;}
 .movie_card1 img {
     width: 100%; /* 부모(.movie_card)의 너비에 꽉 채웁니다. (240px) */
@@ -121,6 +144,7 @@
     margin-top: 8px; /* 이미지와의 간격 */
 }
 
+/* movie card2 styles (ranking row) */
 .movie_card2{
 	display: flex;
 	align-items:center;
@@ -133,7 +157,7 @@
     color: #555;      /* 너무 튀지 않는 색상 */
     /* 숫자가 이미지 왼쪽으로 살짝 겹치게 하는 효과 */
     margin-right: -20px;
-    z-index: 1; /* 숫자가 이미지 위로 올라오도록 함 */
+    z-index: -1; 
 }
 .movie_card2 img {
     width:120px; /* 부모(.movie_card)의 너비에 꽉 채웁니다. (240px) */
@@ -149,15 +173,12 @@
     margin-top: 8px; /* 이미지와의 간격 */
 }
 
-.list_title{color:aliceblue; font-size:large;}
-
-.list{
+/* footer style */
+.footer{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: column-reverse;
 }
-
-.main{
-	display: flex;
-	flex-direction: column;
+.footer-content{
+	font-size: 2.0;
+	color: #555;
 }
