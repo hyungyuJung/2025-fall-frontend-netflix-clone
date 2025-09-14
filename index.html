@@ -6,54 +6,139 @@
     </head>
     <body class="page">
         <header class="header">
-            <p class="netflix_title">Netflix</p>
+            <div class="header_left">
+                <h1 class="netflix_logo">
+                    <a href="#">NETFLIX</a>
+                </h1>
+                <nav class="main_nav">
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">시리즈</a></li>
+                        <li><a href="#">영화</a></li>
+                        <li><a href="#">New! 요즘 대세 콘텐츠</a></li>
+                        <li><a href="#">내가 찜한 콘텐츠</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_right">
+                <div class="search_icon">검색</div>
+                <div class="notification_icon">알림</div>
+                <div class="profile_icon">프로필</div>
+            </div>
         </header>
-        <main>
+        <main class="main">
             <section class="hero">
                 <h2 class="hero_bg_image">Before Sunset</h2>
-                <!-- <div class = "tags"> -->
-                    <button> 재생 </button>
-                    <button> 상세정보 </button>
-                <!-- </div> -->
+                <button> 재생 </button>
+                <button> 상세정보 </button>
             </section>
 
 			<section class="custom_list">
                 <h2 class="list_title">위시 콘텐츠</h2>
-                <div class = "tags">
-					<img class="movie_card1" src="/img/before_sunrise_1.jpg" alt="Movie poster of Before Sunrise. Man and woman walking on the street"> Before Sunrise	</img>
-                    <img class="movie_card1" src="/img/before_midnight_1.jpg" alt="Movie poster of Before Midnight. Man and woman walking on the street"> Before Midnight	</img>
+                <div class = "list">
+                    <div class="movie_card1">
+                        <img src="/img/before_sunrise_1.jpg" alt="Movie poster of Before Sunrise. Man and woman walking on the street"></img>
+                        <h3>Before Sunrise</h3>
+                    </div>
+                    <div class="movie_card1">
+                        <img src="/img/before_midnight_1.jpg" alt="Movie poster of Before Midnight. Man and woman walking on the street"></img>
+                        <h3>Before Midnight</h3>
+                    </div>
                 </div>
             </section>
 
             <section class="watching_list">
                 <h2 class="list_title">.님이 시청 중인 콘텐츠</h2>
-                <div class = "tags">
-                    <img class="movie_card1" src="/img/everything_everywhere_all_at_once_1.jpg" alt="Default movie icon."> Everything Everywhere All at Once </img>
-                    <img class="movie_card1" src="/img/the_shawshank_redemption_1.jpg" alt="Default movie icon."> The Shawshank Redemption </img>
+                <div class = "list">
+                    <div class="movie_card1">
+                        <img src="/img/everything_everywhere_all_at_once_1.jpg" alt="Default movie icon."></img>
+                        <h3>Everything Everywhere All at Once </h3>
+                    </div>
+                    <div class="movie_card1">
+                        <img src="/img/the_shawshank_redemption_1.jpg" alt="Default movie icon."></img>
+                        <h3>The Shawshank Redemption</h3>
+                    </div>
                 </div>              
             </section>
 
             <section class="recommends">
                 <h2 class="list_title">추천 콘텐츠</h2>
-                <div class = "tags">
-                    <img class="movie_card1" src="/img/inglourious_basterds_1.jpg" alt="Default movie icon."> Inglourious Basterds </img>
-                    <img class="movie_card1" src="/img/the_dark_night_1.jpg" alt="Default movie icon."> The Dark Night </img>
+                <div class = "list">
+                    <div class="movie_card1">
+                        <img class="movie_card1" src="/img/inglourious_basterds_1.jpg" alt="Default movie icon."></img>
+                        <h3>Inglourious Basterds</h3>
+                    </div>
+                    <div class="movie_card1">
+                        <img class="movie_card1" src="/img/the_dark_night_1.jpg" alt="Default movie icon."></img>
+                        <h3>The Dark Night</h3>
+                    </div>
                 </div>
             </section>
+            
+            <section class="top10_list_section">
+                <h2 class="list_title">오늘 대한민국의 TOP 10 콘텐츠</h2>
+                <div class="list">
 
-            <section class="ranking">
-                <h2 class="list_title">오늘 대한민국의 Top10 시리즈</h2>
-                <div class = "tags">
-                    <img class="movie_card2" src="/img/before_sunrise_2.jpg" alt="Default movie icon."> 1. Before Sunrise	</img>
-					<img class="movie_card2" src="/img/before_sunset_2.jpg" alt="Default movie icon."> 2. Before Sunset </img>
-                    <img class="movie_card2" src="/img/before_midnight_2.jpg" alt="Default movie icon."> 3. Before Midnight </img>
-					<img class="movie_card2" src="/img/everything_everywhere_all_at_once_2.jpg" alt="Default movie icon."> 4. Everything Everywhere All at Once </img>
-                    <img class="movie_card2" src="/img/the_shawshank_redemption_2.jpg" alt="Default movie icon."> 5. The Shawshank Redemption </img>
-					<img class="movie_card2" src="/img/inglourious_basterds_2.jpg" alt="Default movie icon."> 6. Inglourious Basterds </img>
-                    <img class="movie_card2" src="/img/the_dark_night_2.jpg" alt="Default movie icon."> 7. The Dark Night </img>
-					<img class="movie_card2" src="/img/whiplash_2.jpg" alt="Default movie icon."> 8. Whiplash	</img>
-					<img class="movie_card2" src="/img/million_dollor_baby_2.jpg" alt="Default movie icon."> 9. Million Dollor Baby </img>
-					<img class="movie_card2" src="/img/la_la_land_2.jpg" alt="Default movie icon."> 10. La La Land </img>
+                    <div class="movie_card2">
+                        <span class="rank">1</span>
+                        <img src="/img/before_sunrise_2.jpg" alt="Before Sunrise">
+                        <!-- <h3>Before Sunrise</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">2</span>
+                        <img src="/img/before_sunset_2.jpg" alt="Before Sunset">
+                        <!-- <h3>Before Sunset</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">3</span>
+                        <img src="/img/before_midnight_2.jpg" alt="Before Midnight">
+                        <!-- <h3>Before Midnight</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">4</span>
+                        <img src="/img/everything_everywhere_all_at_once_2.jpg" alt="Everything Everywhere All at Once">
+                        <!-- <h3>Everything Everywhere All at Once</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">5</span>
+                        <img src="/img/the_shawshank_redemption_2.jpg" alt="The Shawshank Redemption">
+                        <!-- <h3>The Shawshank Redemption</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">6</span>
+                        <img src="/img/inglourious_basterds_2.jpg" alt="Inglourious Basterds">
+                        <!-- <h3>Inglourious Basterds</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">7</span>
+                        <img src="/img/the_dark_night_2.jpg" alt="The Dark Night">
+                        <!-- <h3>The Dark Night</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">8</span>
+                        <img src="/img/whiplash_2.jpg" alt="Whiplash">
+                        <!-- <h3>Whiplash</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">9</span>
+                        <img src="/img/million_dollor_baby_2.jpg" alt="Million Dollar Baby">
+                        <!-- <h3>Million Dollar Baby</h3> -->
+                    </div>
+
+                    <div class="movie_card2">
+                        <span class="rank">10</span>
+                        <img src="/img/la_la_land_2.jpg" alt="La La Land">
+                        <!-- <h3>La La Land</h3> -->
+                    </div>
+
                 </div>
             </section>
         </main>

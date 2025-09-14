@@ -1,8 +1,102 @@
 .page { width: 1440px; margin: 0 auto; background-color:black}
-.header {height:48px; margin: 0px}
+
+/* header styles */
+.header {
+    display: flex;
+    justify-content: space-between; /*divide right and left header part*/
+	align-items: center;
+	height: 72px;
+	padding: 0 60px;
+    margin: 0;
+}
+
+/* left side header*/
+.header_left {
+    display: flex;
+    align-items: center;
+}
+.netflix_logo a {
+    color: red;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none; 
+}
+.main_nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 50px;
+}
+.main_nav li a {
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* right side header */
+.header_right {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 25px;
+}
+
 .hero { width: 1440px; height: 800px; background-image:url('/img/before_sunset_hero_2.jpg'); background-repeat:no-repeat; background-size:cover;}
-.netflix_title{color: red; font-size:x-large;}
-.movie_box{width:240px; height: 160px}
-.movie_card1{width:240px; height: 144px}
-.movie_card2{width:120px; height: 180px}
+
+.movie_card1{width:240px;}
+.movie_card1 img {
+    width: 100%; /* 부모(.movie_card)의 너비에 꽉 채웁니다. (240px) */
+    height: 144px;
+    object-fit: cover; /* 이미지 비율이 깨지지 않도록 채워줍니다. */
+    display: block; /* 이미지 아래에 생기는 미세한 공백을 제거합니다. */
+}
+
+/* 영화 카드 안의 제목 스타일 */
+.movie_card1 h3 {
+    color: white; /* 넷플릭스처럼 글자색을 밝게 */
+    font-size: 16px;
+    margin-top: 8px; /* 이미지와의 간격 */
+}
+
+.movie_card2{
+	display: flex;
+	align-items:center;
+	flex-wrap: wrap;
+}
+
+.movie_card2 .rank {
+    font-size: 8rem; /* 숫자를 매우 크게 */
+    font-weight: bold;
+    color: #555;      /* 너무 튀지 않는 색상 */
+    /* 숫자가 이미지 왼쪽으로 살짝 겹치게 하는 효과 */
+    margin-right: -20px;
+    z-index: 1; /* 숫자가 이미지 위로 올라오도록 함 */
+}
+.movie_card2 img {
+    width:120px; /* 부모(.movie_card)의 너비에 꽉 채웁니다. (240px) */
+    height: 180px;
+    object-fit: cover; /* 이미지 비율이 깨지지 않도록 채워줍니다. */
+    display: block; /* 이미지 아래에 생기는 미세한 공백을 제거합니다. */
+}
+
+/* 영화 카드 안의 제목 스타일 */
+.movie_card2 h3 {
+    color: white; /* 넷플릭스처럼 글자색을 밝게 */
+    font-size: 16px;
+    margin-top: 8px; /* 이미지와의 간격 */
+}
+
 .list_title{color:aliceblue; font-size:large;}
+
+.list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.main{
+	display: flex;
+	flex-direction: column;
+}
