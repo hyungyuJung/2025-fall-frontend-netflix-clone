@@ -47,6 +47,65 @@
     color: inherit;
 }
 
+/* =================================
+   Header Hover Modal Styles
+   ================================= */
+
+/* to position the modal */
+.notification_icon, .profile_icon {
+    position: relative;
+}
+
+/* modal styles */
+.modal {
+    display: none; /* hide normal */
+    position: absolute;
+    top: 150%; 
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 1rem;
+    min-width: 200px; 
+    z-index: 20;
+    border-radius: 4px;
+}
+
+/* hover modal */
+.notification_icon:hover .modal,
+.profile_icon:hover .modal {
+    display: block;
+}
+
+.profile_modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile_modal ul li {
+    margin-bottom: 10px;
+}
+
+.profile_modal ul li:last-child {
+    margin-bottom: 0;
+}
+
+.profile_modal ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.profile_modal ul li a:hover {
+    text-decoration: underline;
+}
+
+.notification_modal p {
+    color: white;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 /* overall main layout (by flex box) */
 .main{
 	display: flex;
@@ -130,23 +189,11 @@
 }
 .slides {
   display: flex;
-  /* flex-wrap, position, left, top 등은 그대로 유지해도 괜찮습니다. */
   height: 200px;
   padding: 0;
-  margin: 0; /* ul 태그의 기본 margin/padding 제거 */
-  list-style: none; /* ul 태그의 기본 list-style 제거 */
-  /* transition은 JS에서 제어하므로 여기서 삭제해도 됩니다. */
+  margin: 0; 
+  list-style: none; 
 }
-/* .slides {
-  display: flex;
-  flex-wrap: nowrap;
-  position: relative;
-  left: 0;
-  top: 0;
-  height: 200px;
-  transition: 0.5s ease-out;
-  padding: 0px;
-} */
 .slides li {
   flex: 0 0 224px;
   margin-right: 10px;
