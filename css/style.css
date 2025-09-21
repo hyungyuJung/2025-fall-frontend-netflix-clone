@@ -116,16 +116,64 @@
     margin-bottom: 30px;
 }
 
-/* card list styles */
-.list{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+/* slide css styles : overflow hidden is important! */
+.list_title{
+    color:aliceblue;
+    font-size: large;
 }
-.list_title{color:aliceblue; font-size:large;}
-.list a {
-    text-decoration: none;
-    color: inherit;
+.slide_wrapper {
+    width: 1440px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slides {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 200px;
+  transition: 0.5s ease-out;
+  padding: 0px;
+}
+.slides li {
+  flex: 0 0 224px;
+  margin-right: 10px;
+}
+
+/* controller styles (prev, next buttons) */
+.controller {
+    position: absolute; /* list_wrapper를 기준으로 위치 지정 */
+    top: 40%; /* list_wrapper의 수직 중앙에 위치 */
+    left: 0;
+    width: 100%; /* list_wrapper와 동일한 너비 */
+    display: flex; /* 자식 요소(prev, next)를 가로로 배치 */
+    justify-content: space-between; /* prev, next를 양 끝에 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    transform: translateY(-50%); /* top: 50%의 기준점을 요소의 중앙으로 정렬 */
+    pointer-events: none; /* 버튼 외의 영역에서 마우스 이벤트 무시 (버튼 클릭 가능) */
+    z-index: 10; /* 슬라이드 이미지 위로 올라오도록 */
+}
+.controller span {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    color: white;
+    font-size: 2em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    user-select: none; /* 텍스트 선택 방지 */
+    pointer-events: auto; /* span 자체는 마우스 이벤트를 받도록 허용 */
+}
+.controller span.prev {
+    margin-left: 10px; /* 왼쪽 버튼의 여백 */
+}
+.controller span.next {
+    margin-right: 10px; /* 오른쪽 버튼의 여백 */
+}
+.controller span:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* movie card1 styles (except ranking row) */
