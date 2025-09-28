@@ -176,13 +176,39 @@
 }
 
 /* slide css styles : overflow hidden is important! */
-.list_title{
-    color:aliceblue;
-    font-size: large;
+.list_title_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
+
+.list_title {
+    color: aliceblue;
+    font-size: large;
+    margin: 20px 0 0 16px;
+}
+
+.pagination {
+    color: #fff;
+    font-size: 1rem;
+    margin: 20px 0 0 16px;
+    min-width: 60px;
+    text-align: right;
+}
+.pagination .dot {
+    color: #888;
+    font-size: 0.8rem;
+    margin: 0 2px;
+}
+.pagination .dot.active {
+    color: #fff;
+}
+
 .slide_wrapper {
+    padding-top: 8px;
     width: 1440px;
-    height: 200px;
+    height: 240px;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
@@ -194,10 +220,6 @@
   margin: 0; 
   list-style: none; 
 }
-/* .slides li {
-  flex: 0 0 224px;
-  margin-right: 10px;
-} */
 
 .slides li.movie_card1 {
   flex: 0 0 224px;
