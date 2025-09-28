@@ -264,8 +264,37 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* like button style */
+.like-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #e50914;
+    z-index: 5;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    padding: 0;
+}
+.like-btn.liked {
+    color: #e50914;
+    background: rgba(255,255,255,0.7);
+}
+.like-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
 /* movie card1 styles (except ranking row) */
 .movie_card1{
+    position: relative;
 	width:224px;
 	margin: 8px;
 }
@@ -284,30 +313,8 @@
 }
 
 /* movie card2 styles (ranking row) */
-/* .movie_card2{
-	display: flex;
-	align-items:center;
-    flex-direction: column;
-	flex-wrap: wrap;
-    width: 180px;
-	margin: 8px;
-}
-
-.movie_card2 .rank {
-    font-size: 6rem; 
-    font-weight: bold;
-    color: #555;      
-    margin-right: -20px;
-    z-index: -1; 
-}
-.movie_card2 img {
-    width:120px; 
-    height: 180px;
-    object-fit: cover; 
-    display: block; 
-} */
-
 .movie_card2 {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
