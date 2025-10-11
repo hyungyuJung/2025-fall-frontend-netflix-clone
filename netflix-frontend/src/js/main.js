@@ -1,6 +1,7 @@
 import { initSliders } from './slider.js';
 import { fetchCardsData, renderCards } from './fetch.js';
 import { initLikeButtons } from './like.js';
+import {initSearch} from "./search.js";
 
 document.addEventListener('DOMContentLoaded', async () => {
   const data = await fetchCardsData();
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderCards('.top10_list_section .slides', data.top10, 'top10');
   initSliders();
   initLikeButtons();
+  initSearch();
 });

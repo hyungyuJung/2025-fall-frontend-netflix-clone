@@ -47,6 +47,49 @@
     color: inherit;
 }
 
+/* ▼▼▼▼▼ SEARCH BAR STYLE START ▼▼▼▼▼ */
+.search_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 아이템을 오른쪽으로 정렬 */
+}
+
+.search_input {
+    width: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    opacity: 0; /* 처음에는 투명하게 */
+    transition: width 0.4s ease, opacity 0.4s ease, padding 0.4s ease; /* 부드러운 전환 효과 */
+    outline: none;
+}
+
+.search_input.active {
+    width: 250px; /* 활성화 시 너비 */
+    padding: 8px 12px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 1; /* 활성화 시 보이게 */
+}
+
+.search_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search_button img{
+    width: 24px;
+    height: 24px;
+}
+/* SEARCH BAR STYLE END  */
+
+
 /* =================================
    Header Hover Modal Styles
    ================================= */
