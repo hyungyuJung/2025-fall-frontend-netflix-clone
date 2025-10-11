@@ -8,7 +8,7 @@
 # -------------------------------------------------------------------
 # npm install 이나 yarn install을 통해 언제든지 다시 설치할 수 있으므로
 # 절대로 Git에 포함하지 않습니다. 용량이 매우 큽니다.
-/node_modules
+/netflix-frontend/node_modules
 
 # 로그 (Logs)
 # -------------------------------------------------------------------
@@ -35,12 +35,12 @@ pnpm-debug.log*
 # 빌드 및 배포 결과물 (Build & Production)
 # -------------------------------------------------------------------
 # 소스 코드를 변환하여 생성된 파일들이므로 버전 관리 대상이 아닙니다.
-/dist
-/build
-/.out
-/.next
-/.nuxt
-/coverage
+/netflix-frontend/dist
+/netflix-frontend/build
+/netflix-frontend/.out
+/netflix-frontend/.next
+/netflix-frontend/.nuxt
+/netflix-frontend/coverage
 
 # 운영체제(OS) 및 에디터(IDE) 관련 파일
 # -------------------------------------------------------------------
