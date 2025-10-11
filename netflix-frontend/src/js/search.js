@@ -9,11 +9,49 @@ function debounce(func, delay) {
   };
 }
 
-// Perform search by querying the backend API - print results to console for now
+// Toggle visibility of main content and search results: True->results, False->main content
+function toggleContentView(showResults) {
+  const mainSections = document.querySelectorAll('.main > section:not(.search_results_section)');
+  const resultsSection = document.querySelector('.search_results_section');
+
+  mainSections.forEach(section => {
+    section.style.display = showResults ? 'none' : 'block'; // 또는 'flex' 등 원래 속성
+  });
+  resultsSection.style.display = showResults ? 'block' : 'none';
+}
+
+
+// Render search results to the page
+function renderSearchResults(results, query) {
+  const resultsSection = document.querySelector('.search_results_section');
+
+  // show main content if query is empty
+  if (query.trim() === '' ) {
+    toggleContentView(false); // recover main content view
+    resultsSection.innerHTML = '';
+    return;
+  }
+
+  // hide main content and show results section
+  toggleContentView(true); 
+
+  const gridHTML = results.map(item => `
+    <div class="movie_card1">
+      <img src="${item.img}" alt="${item.title}">
+      <h3>${item.title}</h3>
+    </div>
+  `).join('');
+
+  resultsSection.innerHTML = `
+    <h2 class="search_results_title">'${query}' 관련 콘텐츠</h2>
+    <div class="results_grid">${gridHTML}</div>
+  `;
+}
+
+// Perform search by querying the backend API - render results to page
 async function performSearch(query) {
-  // end early if query is empty
   if (!query || query.trim() === '') {
-    console.log('검색어가 없습니다.');
+    renderSearchResults([], ''); // recover to main view if query is empty
     return;
   }
 
@@ -22,14 +60,11 @@ async function performSearch(query) {
 
   try {
     const response = await fetch(searchUrl);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const results = await response.json();
 
-    // check results in console for now
-    console.log('검색 결과:', results);
-
+    // render results to page
+    renderSearchResults(results, query);
   } catch (error) {
     console.error('검색 중 오류가 발생했습니다:', error);
   }
@@ -59,10 +94,16 @@ export function initSearch() {
     debouncedSearch(searchInput.value);
   });
 
-  // close search input when clicking outside
+  // close search input when clicking outside and reset if needed
   document.addEventListener('click', (event) => {
     if (searchInput.classList.contains('active') && event.target !== searchInput) {
       searchInput.classList.remove('active');
+      
+      // recover main view if input had value
+      if (searchInput.value) {
+        searchInput.value = '';
+        renderSearchResults([], '');
+      }
     }
   });
 }

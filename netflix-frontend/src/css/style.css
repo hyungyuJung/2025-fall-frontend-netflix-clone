@@ -47,7 +47,7 @@
     color: inherit;
 }
 
-/* ▼▼▼▼▼ SEARCH BAR STYLE START ▼▼▼▼▼ */
+/* SEARCH BAR STYLE START*/
 .search_container {
     display: flex;
     align-items: center;
@@ -88,6 +88,26 @@
     height: 24px;
 }
 /* SEARCH BAR STYLE END  */
+
+/* Search Result Style */
+.search_results_section {
+    display: none; /* hide */
+    padding: 40px 24px;
+}
+
+.search_results_title {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.results_grid {
+    display: grid;
+    /* 화면 크기에 맞춰 자동으로 열 개수를 조절하는 반응형 그리드 */
+    grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+    gap: 16px; 
+}
+
 
 
 /* =================================
