@@ -77,7 +77,7 @@ export function initSearch() {
   const searchInput = document.querySelector('.search_input');
 
   // 300ms debounced search function
-  const debouncedSearch = debounce(performSearch, 300);
+  const debouncedSearch = debounce(performSearch, 500);
 
   // toggle search input visibility on button click
   searchButton.addEventListener('click', (event) => {
